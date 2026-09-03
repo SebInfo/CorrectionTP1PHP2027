@@ -15,5 +15,3 @@ $prixFinal = $prix * (1 - $reduction);
 echo "Prix initial : " . $prix . " €" . SAUT;
 echo "Réduction : " . ($reduction * 100) . " %" . SAUT;
 echo "Prix après réduction : " . $prixFinal . " €" . SAUT;
-
-?>

@@ -10,4 +10,3 @@ if ($prix < 50) {
     echo "Réduction de 10 %";
 }
 echo SAUT;
-?>
