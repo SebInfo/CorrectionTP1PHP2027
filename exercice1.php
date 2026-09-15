@@ -1,9 +1,8 @@
 <?php
 
 $produit = "Ordinateur portable";
-$prixHT = 7150;
+$prixHT = 1000;
 define("SAUT","\n");
-
 const TVA = 0.20;
 
 $prixTTC = $prixHT * (1 + TVA);
