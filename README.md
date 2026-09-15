@@ -11,7 +11,7 @@ TP progressif de révision des fondamentaux de PHP avant d'aborder les notions d
 
 ## 📘 Énoncé complet
 
-➡️ **[Consulter le TP et tous les exercices](TP_PHP.md)**
+➡️ **[Consulter le TP et tous les exercices](SujetTD1.md)**
 
 Le TP comprend : variables, conditions, boucles, tableaux, fonctions, formulaires, sécurisation des données, PDO et MySQL, fichiers, `include` / `require`, CSS et un mini-projet de synthèse.
 
