@@ -1,68 +1,33 @@
-# Exercices PHP
+# 🐘 TP de révision PHP — BTS SIO SLAM
 
-Ce dépôt contient une série d'exercices progressifs en PHP.
+![PHP](https://img.shields.io/badge/PHP-8.x-777BB4?logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-PDO-4479A1?logo=mysql&logoColor=white)
+![Niveau](https://img.shields.io/badge/Niveau-BTS%20SIO%20SLAM-blue)
+![Contenu](https://img.shields.io/badge/Contenu-11%20%2B%2010bis-success)
+![Code](https://img.shields.io/badge/Code-MIT-green)
+![Licence](https://img.shields.io/badge/Support-CC%20BY--NC%204.0-lightgrey)
 
-Les exercices abordent notamment :
+TP progressif de révision des fondamentaux de PHP avant d'aborder les notions de deuxième année.
 
-- les variables ;
-- les conditions ;
-- les boucles ;
-- les tableaux ;
-- les formulaires avec `GET` et `POST` ;
-- la connexion à une base MySQL avec PDO ;
-- les requêtes préparées ;
-- la lecture et l'écriture de fichiers ;
-- `include` et `require` ;
-- l'utilisation d'une feuille de style CSS.
+## 📘 Énoncé complet
 
-## Base de données
+➡️ **[Consulter le TP et tous les exercices](TP_PHP.md)**
 
-Les exercices utilisant PDO s'appuient sur la base :
+Le TP comprend : variables, conditions, boucles, tableaux, fonctions, formulaires, sécurisation des données, PDO et MySQL, fichiers, `include` / `require`, CSS et un mini-projet de synthèse.
 
-```text
-boutique
-```
+## 🗄️ Base de données
 
-avec notamment la table :
+Les exercices PDO utilisent la base `boutique` et la table `produit`.
 
-```text
-produit
-```
+Le fichier de connexion commun est `connexion.php`.
 
-Le fichier de connexion utilisé est :
+## 🎯 Objectif
 
-```text
-connexion.php
-```
+Être capable de réaliser un petit programme PHP procédural comprenant un formulaire HTML, un traitement PHP, une requête PDO vers MySQL et un affichage dynamique mis en forme avec CSS.
 
-## Organisation
+## ⚖️ Licence
 
-Chaque exercice peut être placé dans un dossier séparé.
+- **Supports pédagogiques et énoncés** : CC BY-NC 4.0.
+- **Exemples de code PHP, SQL, HTML et CSS** : licence MIT.
 
-Exemple :
-
-```text
-exercice01/
-exercice02/
-exercice03/
-...
-exercice11/
-```
-
-## Objectif
-
-L'objectif est de revoir les bases de PHP et de progresser vers la réalisation d'une petite application Web utilisant :
-
-```text
-HTML
-↓
-PHP
-↓
-PDO
-↓
-MySQL
-↓
-CSS
-```
-
-Ces exercices sont destinés aux étudiants de BTS SIO option SLAM.
+© 2026 Sébastien
