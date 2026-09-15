@@ -1,6 +1,6 @@
 <?php
 
-require  "connexion.php";
+require "connexion.php";
 
 $produits = [];
 $message = "";
@@ -30,61 +30,142 @@ if (isset($_POST["prix_max"])) {
 ?>
 
 <!DOCTYPE html>
+
 <html lang="fr">
 
 <head>
+
     <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Catalogue de produits</title>
+
+    <link rel="stylesheet" href="style11.css">
+
 </head>
 
 <body>
 
-<h1>Catalogue de produits</h1>
+<div class="conteneur">
 
-<form method="post">
+    <header class="entete">
 
-    <label for="prix_max">Prix maximum :</label>
+        <h1>Catalogue de produits</h1>
 
-    <input
-        type="number"
-        name="prix_max"
-        id="prix_max"
-        step="0.01"
-        min="0"
-        required
-    >
+        <p>
+            Recherchez les produits correspondant à votre budget.
+        </p>
 
-    <button type="submit">Rechercher</button>
+    </header>
 
-</form>
+    <main>
 
-<?php if (!empty($produits)): ?>
+        <section class="carte">
 
-    <table border="1">
+            <form method="post" class="formulaire">
 
-        <tr>
-            <th>Nom</th>
-            <th>Prix</th>
-            <th>Stock</th>
-        </tr>
+                <label for="prix_max">
+                    Prix maximum
+                </label>
 
-        <?php foreach ($produits as $produit): ?>
+                <div class="zone-recherche">
 
-            <tr>
-                <td><?= htmlspecialchars($produit["nom"]) ?></td>
-                <td><?= number_format($produit["prix"], 2, ",", " ") ?> €</td>
-                <td><?= $produit["stock"] ?></td>
-            </tr>
+                    <input
+                        type="number"
+                        name="prix_max"
+                        id="prix_max"
+                        step="0.01"
+                        min="0"
+                        placeholder="Exemple : 100"
+                        required
+                    >
 
-        <?php endforeach; ?>
+                    <button type="submit">
+                        Rechercher
+                    </button>
 
-    </table>
+                </div>
 
-<?php elseif ($message !== ""): ?>
+            </form>
 
-    <p><?= $message ?></p>
+        </section>
 
-<?php endif; ?>
+        <?php if (!empty($produits)): ?>
+
+            <section class="carte">
+
+                <h2>
+                    Résultats de la recherche
+                </h2>
+
+                <div class="tableau-conteneur">
+
+                    <table class="resultats">
+
+                        <thead>
+
+                            <tr>
+                                <th>Nom</th>
+                                <th>Prix</th>
+                                <th>Stock</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <?php foreach ($produits as $produit): ?>
+
+                                <tr>
+
+                                    <td>
+                                        <?= htmlspecialchars($produit["nom"]) ?>
+                                    </td>
+
+                                    <td class="prix">
+                                        <?= number_format(
+                                            $produit["prix"],
+                                            2,
+                                            ",",
+                                            " "
+                                        ) ?> €
+                                    </td>
+
+                                    <td>
+                                        <?= $produit["stock"] ?>
+                                    </td>
+
+                                </tr>
+
+                            <?php endforeach; ?>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        <?php elseif ($message !== ""): ?>
+
+            <div class="message">
+                <?= $message ?>
+            </div>
+
+        <?php endif; ?>
+
+    </main>
+
+    <footer class="pied-page">
+
+        BTS SIO SLAM — PHP et PDO
+
+    </footer>
+
+</div>
 
 </body>
+
 </html>

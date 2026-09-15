@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f3f5f8;
+    color: #222;
+}
+
+.conteneur {
+    width: 90%;
+    max-width: 950px;
+    margin: 40px auto;
+}
+
+.entete {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.entete h1 {
+    margin-bottom: 8px;
+    font-size: 2rem;
+}
+
+.entete p {
+    margin: 0;
+    color: #666;
+}
+
+.carte {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.carte h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.formulaire label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.zone-recherche {
+    display: flex;
+    gap: 10px;
+}
+
+.zone-recherche input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #cfd4da;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.zone-recherche input:focus {
+    outline: none;
+    border-color: #316fd3;
+}
+
+.zone-recherche button {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 6px;
+    background-color: #316fd3;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.zone-recherche button:hover {
+    background-color: #2458aa;
+}
+
+.tableau-conteneur {
+    overflow-x: auto;
+}
+
+.resultats {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.resultats th {
+    background-color: #316fd3;
+    color: white;
+    text-align: left;
+    padding: 12px;
+}
+
+.resultats td {
+    padding: 12px;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+.resultats tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.resultats tbody tr:hover {
+    background-color: #eef3fb;
+}
+
+.prix {
+    font-weight: bold;
+}
+
+.message {
+    background-color: #fff3cd;
+    border: 1px solid #ffe69c;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.pied-page {
+    text-align: center;
+    color: #777;
+    font-size: 0.9rem;
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 600px) {
+
+    .conteneur {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .zone-recherche {
+        flex-direction: column;
+    }
+
+    .zone-recherche button {
+        width: 100%;
+    }
+
+}
